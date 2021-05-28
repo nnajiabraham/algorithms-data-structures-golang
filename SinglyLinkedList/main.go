@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"container/list"
+)
 
 type node struct {
 	data int
@@ -14,6 +18,7 @@ type linkedList struct {
 }
 
 func (list *linkedList) append(data int) {
+
 	//creates a new node that will be added to the linkedList
 	newNode := &node{
 		data: data,
@@ -119,6 +124,7 @@ func (list *linkedList) printAll() {
 }
 
 func main() {
+	list.New()
 
 	ll := &linkedList{}
 	ll.append(1)
